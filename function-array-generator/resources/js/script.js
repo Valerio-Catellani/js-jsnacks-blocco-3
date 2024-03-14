@@ -1,5 +1,10 @@
+
+//input
 const userInput = document.getElementById("user-input");
+//buttons
 const sendButton = document.getElementById("send-button");
+const cancelButton = document.getElementById("cancel-button");
+//outout
 const response = document.getElementById("response");
 
 
@@ -9,12 +14,14 @@ const response = document.getElementById("response");
 
 
 sendButton.addEventListener('click', function () {
-    let i = 0;
-    while (i < userInput.value) {
-        generateArray(i);
-        i++;
+    if (!isNaN(userInput.value)) {
+        response.innerHTML = "";
+        let i = 0;
+        while (i < userInput.value) {
+            generateArray(i);
+            i++;
+        }
     }
-
 })
 
 function generateArray(number) {
@@ -26,3 +33,7 @@ function generateArray(number) {
     response.innerHTML += `<p>L'array numero ${number + 1} è : [${array}]</p>`
     return array
 }
+
+cancelButton.addEventListener('click', function () {
+    response.innerHTML = "";
+})
