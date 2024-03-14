@@ -6,13 +6,14 @@ const response = document.getElementById("response");
 
 
 let array = [];
-let sum = 0;
 
+let sum = 0;
 while (sum < 50) {
     let promptInput = parseInt(prompt("inserisci un numero"))
-    isNaN(promptInput) ? alert("devi inserire un numero") : "";
-    array.push(promptInput);
-    sum += promptInput;
+    if (!isNaN(promptInput)) {
+        array.push(promptInput);
+        sum += promptInput;
+    }
 }
 response.innerHTML += `I numeri inseriti sono [${array}]. La loro somma vale ${sum}`
 

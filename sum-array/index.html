@@ -17,13 +17,15 @@
 </head>
 
 <body>
-  <div class="container my-5">
+  <div class="container my-5 d-flex flex-column p-4 bg-light border rounded-3">
+    <h2 class="text-center mb-3 ">Risiko Fight</h2>
     <div class="mb-3">
-      <label for="user-input" class="form-label">Input Utente</label>
-      <input type="text" class="form-control" id="user-input" placeholder="input utente">
+      <label for="user-attacker-input" class="form-label">Inserisci il numero di carri armati dell'attaccante</label>
+      <input type="number" class="form-control" id="user-attacker-input" placeholder="Numero truppe attaccanti">
     </div>
-    <button id="send-button" type="button" class="btn btn-lg  btn-success">Invia i dati</button>
-    <div id="response" class="container border rounded-2 p-5 my-3">
+    <div class="buttons d-flex gap-5 justify-content-center ">
+      <button id="send-button" type="button" class="btn btn-lg  btn-success align-self-center ">Invia i dati</button>
+      <button id="cancel-button" type="button" class="btn btn-lg btn-danger align-self-center ">cancella</button>
     </div>
   </div>
 
